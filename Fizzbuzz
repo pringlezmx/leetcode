@@ -1,4 +1,4 @@
-#leetcode fizzbuzz solution
+#leetcode fizzbuzz solution for python3
 
 class Solution:
     def fizzBuzz(self, n: int):
