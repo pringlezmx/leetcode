@@ -1,16 +1,15 @@
-n = int(input())
+#leetcode fizzbuzz solution
 
-def solution(num):
-    nlist = []
-    for i in range(1,num+1,1):
-        if i % 3 == 0 and i % 5 == 0:
-            nlist.append("fizzbuzz")
-        elif i % 3 == 0:
-            nlist.append("fizz")
-        elif i % 5 == 0:
-            nlist.append("buzz")
-        else:
-            nlist.append(str(i))
-    return nlist
-
-print(solution(n))
+class Solution:
+    def fizzBuzz(self, n: int):
+        nlist = []
+        for i in range(1,n+1,1):
+            if i % 3 == 0 and i % 5 == 0:
+                nlist.append("FizzBuzz")
+            elif i % 3 == 0:
+                nlist.append("Fizz")
+            elif i % 5 == 0:
+                nlist.append("Buzz")
+            else:
+                nlist.append(str(i))
+        return nlist
