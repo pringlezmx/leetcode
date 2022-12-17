@@ -1,0 +1,33 @@
+class Solution:
+    def addBinary(self, a: str, b: str) :
+        numL = []
+        remainder = 0
+        max_len = max(len(a), len(b))
+        a = a.zfill(max_len+1)
+        b = b.zfill(max_len+1)
+        a = a[::-1]
+        b = b[::-1]
+        for i in range(max_len+1):
+            if int(a[i])+int(b[i])+remainder == 0:
+                numL.append(0)
+                remainder = 0
+            elif int(a[i])+int(b[i])+remainder == 1:
+                numL.append(1)
+                remainder = 0
+            elif int(a[i])+int(b[i])+remainder == 2:
+                remainder = 1
+                numL.append(0)
+            elif int(a[i])+int(b[i])+remainder == 3:
+                remainder = 1
+                numL.append(1)
+        numL.reverse()
+        num = ""
+        if numL[0] == 0:
+            for inde in range(len(numL)-1):
+                hold = "".join(str(numL[inde+1]))
+                num = num+hold
+        else:
+            for index in range(len(numL)):
+                hold = "".join(str(numL[index]))
+                num = num+hold
+        return num
