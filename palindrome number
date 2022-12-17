@@ -1,4 +1,4 @@
-#python 3
+#leet code Palibdrome Number python 3
 
 class Solution:
     def isPalindrome(self, x: int):
